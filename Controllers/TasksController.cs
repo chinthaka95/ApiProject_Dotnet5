@@ -14,7 +14,7 @@ namespace ApiProject.Controllers
         [HttpGet]
         public IActionResult Task()
         {
-            var tasks = new string[] { "task1", "task2", "task3" };
+            var tasks = new string[] { "task1", "task2", "task3","Task4" };
             return Ok(tasks);
         }
 
