@@ -1,4 +1,4 @@
-﻿using ApiProject.Models;
+﻿
 using ApiProject.Services;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -13,10 +13,12 @@ namespace ApiProject.Controllers
     [ApiController]
     public class TodosController : ControllerBase
     {
-        private TodoService _todoService;
-        public TodosController()
+        //  private TodoService _todoService;
+        private ITodoRepositary _todoService;
+        public TodosController(ITodoRepositary repositary)
         {
-            _todoService = new TodoService();
+            // _todoService = new TodoService();
+            _todoService = repositary;
         }
 
 
